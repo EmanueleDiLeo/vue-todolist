@@ -64,3 +64,7 @@ background-color: white;
   color: red;
 }
 
+.line{
+  text-decoration: line-through;
+}
+

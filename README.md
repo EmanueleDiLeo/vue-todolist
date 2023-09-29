@@ -22,4 +22,5 @@ Bonus:
 ### Svolgimento
 
 1. creare html e css
-1. 
+1. creare un array di oggetti con il messaggio da scrivere e il done che sara vero o falso
+1. fare un v-for su html del tasks e una classe su span che si attiva quando il done è true 

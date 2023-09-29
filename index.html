@@ -40,8 +40,8 @@
       <!-- Start task -->
       <div class="task">
         <ul>
-          <li>
-            <span>task</span>
+          <li v-for="task in tasks">
+            <span :class="{'line': task.done}">{{task.message}}</span>
             <i class="fa-solid fa-trash"></i>
           </li>
         </ul>
