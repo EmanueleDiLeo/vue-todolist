@@ -10,13 +10,50 @@
   
   <!-- Vue -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <!-- My style -->
+  <link rel="stylesheet" href="css/style.css">
+
   <title>Document</title>
 </head>
 <body>
 
+  <!-- START APP -->
   <div id="app">
-    
+
+    <!-- Start container -->
+    <div class="container">
+
+      <!-- Start logo -->
+      <div class="logo">
+        <h1>boolean</h1>
+      </div>
+      <!-- End logo -->
+
+      <!-- Start new-task -->
+      <div class="new-task">
+        <input type="text" placeholder="Nuova task">
+        <button>Aggiungi</button>
+      </div>
+      <!-- End new-task -->
+
+      <!-- Start task -->
+      <div class="task">
+        <ul>
+          <li>
+            <span>task</span>
+            <i class="fa-solid fa-trash"></i>
+          </li>
+        </ul>
+      </div>
+      <!-- End task -->
+
+
+    </div>
+    <!-- End container -->
+
   </div>
+  <!-- END APP -->
   
   <!-- Script -->
   <script src="js/script.js"></script>

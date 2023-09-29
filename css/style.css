@@ -3,3 +3,64 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+ul{
+  list-style: none;
+}
+
+.container{
+  width: 65%;
+  margin: 0 auto;
+}
+
+.logo{
+  margin: 0 auto;
+  width: 300px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.new-task{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.new-task input,
+.new-task button{
+  border-radius: 10px;
+  border-width: 1px;
+  padding: 10px 15px;
+}
+
+.new-task input{
+  width: 300px;
+  margin-right: 20px;
+}
+
+.task{
+  background-color: #F5F7F7;
+  padding: 30px 10px;
+  border-radius: 15px;
+}
+
+.task li{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-bottom: 1px solid lightgray;
+  line-height: 40px;
+}
+
+.task li:hover{
+background-color: white;
+}
+
+.task i{
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.task i:hover{
+  color: red;
+}
+
