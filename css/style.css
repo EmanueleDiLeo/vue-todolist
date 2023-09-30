@@ -68,3 +68,6 @@ background-color: white;
   text-decoration: line-through;
 }
 
+.error{
+ color: red;
+}

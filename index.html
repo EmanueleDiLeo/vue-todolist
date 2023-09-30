@@ -34,15 +34,16 @@
       <div class="new-task">
         <input type="text" placeholder="Nuova task">
         <button>Aggiungi</button>
+        <p v-if="isErrorTask" class="error">Non puoi eliminare una task da fare</p>
       </div>
       <!-- End new-task -->
 
       <!-- Start task -->
       <div class="task">
         <ul>
-          <li v-for="task in tasks">
+          <li v-for="(task, index) in tasks">
             <span :class="{'line': task.done}">{{task.message}}</span>
-            <i class="fa-solid fa-trash"></i>
+            <i @click="removeTask(index)" class="fa-solid fa-trash"></i>
           </li>
         </ul>
       </div>

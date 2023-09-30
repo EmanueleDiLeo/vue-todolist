@@ -18,11 +18,25 @@ createApp({
           done: false,
         },
       ],
+      isErrorTask: false,
     }
   },
 
   methods:{
 
+    removeTask(index){
+      if(this.tasks[index].done){
+        this.tasks.splice(index,1);
+      }
+      else{
+        this.isErrorTask = true; 
+        setTimeout( () =>{
+          this.isErrorTask = false;
+        },3000);
+      }
+    },
+
+    
   },
 
   mounted(){

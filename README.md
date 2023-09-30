@@ -24,3 +24,4 @@ Bonus:
 1. creare html e css
 1. creare un array di oggetti con il messaggio da scrivere e il done che sara vero o falso
 1. fare un v-for su html del tasks e una classe su span che si attiva quando il done è true 
+1. creo un p che si attiva se l'utente vuole eliminare una task che deve ancora fare e resta attivo per 3 secondi
