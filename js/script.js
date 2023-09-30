@@ -19,6 +19,8 @@ createApp({
         },
       ],
       isErrorTask: false,
+      newMessage: "",
+      isErrorNewTask: false,
     }
   },
 
@@ -36,7 +38,25 @@ createApp({
       }
     },
 
-    
+    addTask(){
+      if(this.newMessage.length < 5){
+        isErrorNewTask = true;
+        setTimeout( () => {
+          this.isErrorNewTask = false;
+        },3000);
+      }
+      else{
+        newTask = {
+          message: this.newMessage,
+          done: false,
+        };
+        this.tasks.push(newTask);
+      }
+    },
+
+    changeDone(index){
+      this.tasks[index].done = !this.tasks[index].done;
+    },
   },
 
   mounted(){

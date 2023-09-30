@@ -32,9 +32,11 @@
 
       <!-- Start new-task -->
       <div class="new-task">
-        <input type="text" placeholder="Nuova task">
-        <button>Aggiungi</button>
+        <input type="text" placeholder="Nuova task" 
+          v-model.trim="newMessage" @keyup.enter="addTask">
+        <button @click="addTask">Aggiungi</button>
         <p v-if="isErrorTask" class="error">Non puoi eliminare una task da fare</p>
+        <p v-if="isErrorNewTask" class="error">La task deve essere di almeno 5 caratteri</p>
       </div>
       <!-- End new-task -->
 
@@ -42,8 +44,8 @@
       <div class="task">
         <ul>
           <li v-for="(task, index) in tasks">
-            <span :class="{'line': task.done}">{{task.message}}</span>
-            <i @click="removeTask(index)" class="fa-solid fa-trash"></i>
+            <span @click.close="changeDone(index)" :class="{'line': task.done}">{{task.message}}</span>
+            <i @click.close="removeTask(index)" class="fa-solid fa-trash"></i>
           </li>
         </ul>
       </div>
