@@ -40,7 +40,7 @@ createApp({
 
     addTask(){
       if(this.newMessage.length < 5){
-        isErrorNewTask = true;
+        this.isErrorNewTask = true;
         setTimeout( () => {
           this.isErrorNewTask = false;
         },3000);
@@ -51,6 +51,7 @@ createApp({
           done: false,
         };
         this.tasks.push(newTask);
+        this.newMessage = "";
       }
     },
 
@@ -61,6 +62,6 @@ createApp({
 
   mounted(){
 
-  }
+  },
 
 }).mount("#app")

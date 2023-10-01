@@ -42,12 +42,13 @@
 
       <!-- Start task -->
       <div class="task">
-        <ul>
+        <ul v-if="tasks.length > 0">
           <li v-for="(task, index) in tasks">
-            <span @click.close="changeDone(index)" :class="{'line': task.done}">{{task.message}}</span>
-            <i @click.close="removeTask(index)" class="fa-solid fa-trash"></i>
+            <span @click="changeDone(index)" :class="{'line': task.done}">{{task.message}}</span>
+            <i @click="removeTask(index)" class="fa-solid fa-trash"></i>
           </li>
         </ul>
+        <h2 v-else>Non ci sono task da fare</h2>
       </div>
       <!-- End task -->
 
